@@ -6,6 +6,6 @@ Solve Sudoku without guessing using brute force
 
 # Build Status
 Branch | Build Status
--|-
+-------|-------------
 master | [![Build Status](https://travis-ci.org/JAMESY9868/Sudoku-Solve.svg?branch=master)](https://travis-ci.org/JAMESY9868/Sudoku-Solve)
 
