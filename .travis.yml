@@ -12,7 +12,7 @@ notifications:
 before_script:
     - wget https://github.com/gcc-mirror/gcc/archive/gcc-6_3_0-release.zip -O gcc.zip
     - mkdir gcc
-    - unzip gcc.zip -d gcc 2>/dev/null
+    - unzip gcc.zip -qqd gcc 
     - ls gcc
     - exit 1
     - g++ --version
