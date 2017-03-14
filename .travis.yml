@@ -12,16 +12,11 @@ addons:
             - sourceline: 'http://us.archive.ubuntu.com/ubuntu main'
         packages: gcc
 
-matrix:
-    include:
-      - compiler: gcc
-        env: COMPILER=g++
        
 before_install:
-    - if [ "$TRAVIS_OS_NAME" = 'linux' ]; then sudo apt-get update -qq; fi
+    - sudo apt-get update -qq
 
 before_script:
-    - if [ "$COMPILER" = 'g++' ]; then export CXX='g++' CC='gcc'; fi
     - g++ --version
     - gcc --version
     - make --version
