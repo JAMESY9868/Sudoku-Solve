@@ -1,9 +1,24 @@
 language: cpp
-compiler: gcc
+sudo: required
 script: "make"
 notifications:
     email:
         on_success: always
         on_failure: always
         on_start: always
+addons:
+    apt:
+        sources: gcc-defaults
+        packages: g++
+
+matrix:
+    include:
+      - compiler: gcc
+        env: COMPILER=g++
+       
+before_install:
+    - if [ "$TRAVIS_OS_NAME" = 'linux' ]; then sudo apt update -qq; fi
+
+before_script:
+    - if [ "$COMPILER" = 'g++' ]; then export CXX='g++' CC='gcc'; fi
 
