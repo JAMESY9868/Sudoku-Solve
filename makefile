@@ -3,7 +3,7 @@
 CC = g++
 CFLAGS = 
 
-RM = -rm -fv
+RM = -@rm -fv
 
 srcs = sudoku.cpp unit.cpp board.cpp
 objs = sudoku.o   unit.o   board.o

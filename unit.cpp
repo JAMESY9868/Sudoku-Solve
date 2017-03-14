@@ -4,8 +4,12 @@ Unit::Unit()
 : Unit(0)
 { }
 
-Unit::Unit(int value)
+Unit::Unit(const int value)
 : value(value)
+{ }
+
+Unit::Unit(const Unit &other)
+: value(other.value)
 { }
 
 Unit::~Unit() { return; }

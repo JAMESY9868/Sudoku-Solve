@@ -5,6 +5,12 @@ class Unit {
 
     unsigned int value;
     
+    public: 
+    Unit();
+    Unit(int value);
+    Unit(const Unit &other);
+    ~Unit();
+    
     // Returns 0 if 1~9, 1 if 0, 2 if others
     unsigned int usable();
     
@@ -13,12 +19,6 @@ class Unit {
     int output();
     
     Unit deepcopy(Unit other);
-    
-    public: 
-    Unit();
-    Unit(int value);
-    ~Unit();
-
 };
 
 #endif
