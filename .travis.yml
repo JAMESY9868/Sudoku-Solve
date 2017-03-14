@@ -17,7 +17,7 @@ matrix:
         env: COMPILER=g++
        
 before_install:
-    - if [ "$TRAVIS_OS_NAME" = 'linux' ]; then sudo apt update -qq; fi
+    - if [ "$TRAVIS_OS_NAME" = 'linux' ]; then sudo apt-get update -qq; fi
 
 before_script:
     - if [ "$COMPILER" = 'g++' ]; then export CXX='g++' CC='gcc'; fi
