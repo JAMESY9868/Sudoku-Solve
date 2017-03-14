@@ -8,8 +8,9 @@ notifications:
         on_start: always
 addons:
     apt:
-        sources: gcc-defaults
-        packages: g++
+        sources:
+            - sourceline: 'http://us.archive.ubuntu.com/ubuntu main'
+        packages: gcc
 
 matrix:
     include:
