@@ -1,12 +1,13 @@
 #!/usr/bin/make
 
 CC = g++
-
 CFLAGS = 
 
-srcs = sudoku.cpp unit.cpp
-objs = sudoku.o unit.o
-hdrs = sudoku.h unit.h
+RM = -rm -fv
+
+srcs = sudoku.cpp unit.cpp board.cpp
+objs = sudoku.o   unit.o   board.o
+hdrs = sudoku.h   unit.h   board.h
 
 sudoku.out: $(objs)
 	${CC} $(CFLAGS) -o $@ $?
@@ -22,4 +23,9 @@ cleanup:
 	${RM} *.out
 
 remake:
-	${MAKE} cleanup sudoku.out	
+	${MAKE} cleanup sudoku.out
+	
+test:
+	${MAKE} remake cleanup
+
+
