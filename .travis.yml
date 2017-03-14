@@ -21,4 +21,7 @@ before_install:
 
 before_script:
     - if [ "$COMPILER" = 'g++' ]; then export CXX='g++' CC='gcc'; fi
+    - g++ --version
+    - gcc --version
+    - make --version
 
