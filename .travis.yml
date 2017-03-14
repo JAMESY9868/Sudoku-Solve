@@ -1,5 +1,6 @@
 language: cpp
 sudo: required
+dist: yakkety
 script: "make"
 notifications:
     email:
