@@ -7,17 +7,14 @@ notifications:
         on_success: always
         on_failure: always
         on_start: always
-addons:
-    apt:
-        sources:
-            - sourceline: 'deb http://us.archive.ubuntu.com/ubuntu main'
         packages: gcc
 
-       
-before_install:
-    - sudo apt-get update -qq
-
 before_script:
+    - wget https://github.com/gcc-mirror/gcc/archive/gcc-6_3_0-release.zip -O gcc.zip
+    - mkdir gcc
+    - unzip gcc.zip -d gcc
+    - ls gcc
+    - exit 1
     - g++ --version
     - gcc --version
     - make --version
