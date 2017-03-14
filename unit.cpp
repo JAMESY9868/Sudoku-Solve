@@ -1,10 +1,12 @@
 #include "unit.h"
 
+typedef unsigned int UI;
+
 Unit::Unit()
 : Unit(0)
 { }
 
-Unit::Unit(const int value)
+Unit::Unit(const UI value)
 : value(value)
 { }
 
@@ -14,7 +16,7 @@ Unit::Unit(const Unit &other)
 
 Unit::~Unit() { return; }
 
-unsigned int Unit::usable() {
+UI Unit::usable() {
     // return 0 when value is within the range of 1-9 inclusively
     // return 1 when value is 0
     // return 2 othrewise
@@ -23,7 +25,7 @@ unsigned int Unit::usable() {
     return 2;
 }
 
-Unit Unit::input(int value) {
+Unit Unit::input(UI value) {
     input(Unit(value));
 }
 
@@ -31,7 +33,7 @@ Unit Unit::input(Unit value) {
     deepcopy(value);
 }    
 
-int Unit::output() {
+UI Unit::output() {
     return value;
 }
 

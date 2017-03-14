@@ -1,22 +1,23 @@
 #ifndef UNIT_H
 #define UNIT_H
+typedef unsigned int UI;
 
 class Unit {
 
-    unsigned int value;
+    UI value;
     
     public: 
     Unit();
-    Unit(int value);
+    Unit(UI value);
     Unit(const Unit &other);
     ~Unit();
     
     // Returns 0 if 1~9, 1 if 0, 2 if others
-    unsigned int usable();
+    UI usable();
     
-    Unit input(int value);
+    Unit input(UI value);
     Unit input(Unit value);
-    int output();
+    UI output();
     
     Unit deepcopy(Unit other);
 };
