@@ -9,7 +9,7 @@ notifications:
 addons:
     apt:
         sources:
-            - sourceline: 'http://us.archive.ubuntu.com/ubuntu main'
+            - sourceline: 'deb http://us.archive.ubuntu.com/ubuntu main'
         packages: gcc
 
        
