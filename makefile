@@ -1,7 +1,7 @@
 #!/usr/bin/make
 
 CC = g++
-CFLAGS = 
+CFLAGS = -std=c++11
 
 RM = -@rm -fv
 
