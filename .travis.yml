@@ -9,12 +9,17 @@ notifications:
         on_start: always
         packages: gcc
 
+addons:
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
+            - g++
+
+after_install:
+    - :
+
 before_script:
-    - wget https://github.com/gcc-mirror/gcc/archive/gcc-6_3_0-release.zip -O gcc.zip
-    - mkdir gcc
-    - unzip -qq gcc.zip -d gcc 
-    - (cd gcc/gcc-gcc-6_3_0-release; sudo -H ./install-sh)
-    - exit 1
     - g++ --version
     - gcc --version
     - make --version
