@@ -6,7 +6,7 @@ notifications:
     email:
         on_success: always
         on_failure: always
-        on_start: always
+        on_startup: always
 
 before_script:
     - g++ --version
