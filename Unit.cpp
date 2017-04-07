@@ -30,6 +30,10 @@ UI Unit::get() const {
     return value;
 }
 
+string Unit::toString() const {
+    return to_string(get());
+}
+
 char putChar(Unit const &unit) {
     return char('0' + unit.get());
 }

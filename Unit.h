@@ -2,6 +2,7 @@
 
 #include <string>
 using std::string;
+using std::to_string;
 
 typedef unsigned int UI;
 
@@ -23,7 +24,7 @@ class Unit {
     Unit &set(Unit const&);
     UI get() const;
     
-    string toSring() const;
+    string toString() const;
     
 };
 
