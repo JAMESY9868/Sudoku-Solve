@@ -3,7 +3,7 @@
 #include <vector>
 using std::vector;
 
-#include "defs.h"
+#include "../general/defs.h"
 
 typedef class Possibility py;
 typedef vector<py> vpy;
@@ -23,11 +23,9 @@ class Possibility {
     Possibility(vui const&);
     Possibility(py const&) = default;
     
-    bool &operator[](UI);
-    bool const &operator[](UI) const;
-    bool &get(UI) noexcept;
-    bool const &get(UI) const noexcept;
-    
+    bool operator[](UI) const;
+    bool get(UI) const noexcept;
+    bool set(UI, bool) noexcept;
     
     
     

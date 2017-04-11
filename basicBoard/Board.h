@@ -6,8 +6,8 @@ using std::vector;
 using std::string;
 
 #include "Unit.h"
-#include "Possibility.h"
-#include "defs.h"
+#include "../boardInterpret/Possibility.h"
+#include "../general/defs.h"
 
 typedef vector<Unit> vu;
 typedef vector<vu> vvu;

@@ -10,7 +10,7 @@ Board::Board()
 : values(BOARD_SIZE, vu(BOARD_SIZE, Unit()))
 { }
 
-string Board::getRowString(UI row) const {
+string Board::getRowString(UI const row) const {
     // I think this deals with exception throwing whereas op[] does not
     return getRowsVstr().at(row);
 }
@@ -68,11 +68,11 @@ void Board::printBoard() const {
     return;
 }
 
-Unit &Board::get(UI row, UI col) {
+Unit &Board::get(UI const row, UI const col) {
     return values[row][col];
 }
 
-Unit const &Board::get(UI row, UI col) const {
+Unit const &Board::get(UI const row, UI const col) const {
     return values[row][col];
 }
 
