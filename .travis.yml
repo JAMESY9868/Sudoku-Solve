@@ -9,6 +9,7 @@ notifications:
         on_startup: always
 
 before_script:
+    - ls -alF
     - g++ --version
     - make --version
-
+    - mkdir bin obj || true

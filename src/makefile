@@ -19,8 +19,8 @@ CFLAGS = $(CSTD) $(CWARNING) $(CERROR) $(CDEBUGINFO) $(LNKR_FLAG) $(COMMAND_LINE
 # for now, will add a separate obj dir later
 # The name is misleading, but it is actually used by its children `make`'s, so it needs to descend one level in file system
 # might need some cleaning up
-objLoc = ../
-binLoc = ../
+objLoc = ../../obj/
+binLoc = ../../bin/
 
 # the directory names
 subTasks = basicBoard boardInterpret boardSolve general test
@@ -47,5 +47,5 @@ test-%:
 	${MAKE} -C test test-$*
 
 clear:
-	${RM} ./*.o
+	${RM} ../obj/*.o
 	${RM} */*.o
