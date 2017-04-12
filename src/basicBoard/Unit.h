@@ -4,6 +4,8 @@
 using std::string;
 using std::to_string;
 
+#include "../general/defs.h"
+
 typedef unsigned int UI;
 
 class Unit {
@@ -21,7 +23,6 @@ class Unit {
     UI usable() const;
     
     Unit &set(UI);
-    Unit &set(Unit const&);
     UI get() const;
     
     string toString() const;
